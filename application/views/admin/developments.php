@@ -9,7 +9,19 @@
             <div id="page-wrapper">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-10">
+						<div class="btn-group pull-right p-r-20 p-t-10">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="<?php echo base_url('adminLocalization/exportDevelopments');?>">Export to Excel</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="modal" data-target="#myModal" >Import Developments</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                        <div class="col-lg-8">
                             <h3 class="page-header">Developments</h3>
                         </div>
                         <div class="col-lg-2">
@@ -78,6 +90,37 @@
             <!-- /#page-wrapper -->
         </div>
         <!-- /#wrapper -->
+		<!-- Modal Pop up starts-->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Import Developments</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="form-group " style="margin-bottom:20px;">
+                                  <form method="post" action="<?php echo base_url('adminLocalization/importDevelopments');?>" enctype="multipart/form-data">
+                                    <div class="col-md-12">
+                                      <label class="control-label col-md-4">Upload Development Excel Sheet</label>
+                                        <div class="input-group input-large " >
+                                            <input type="file" class="form-control" name="development" accept="application/vnd.ms-excel" required><span>(.xls,.xlsx formats only)</span>
+                                        </div>
+                                        <input type="submit" name="Import_developments" value="Import" class="btn btn-default">
+                                            <!-- /input-group -->  
+                                    </div>
+                                  </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+      <!-- END Modal Pop up -->
 		<?php $this->load->view('admin/common/footer');?>
         
     </body>

@@ -41,7 +41,7 @@
                                                         <tr class="odd gradeX">
                                                             <td><?php echo $sno++; ?></td>
                                                             <td><?php echo ucwords($designation['name']); ?></td>
-                                                            <td><span><a href="<?php echo base_url('adminLocalization/updateDesignation/' . $designation['id']); ?>">Edit</a></span> | <span><a href="<?php echo base_url('adminLocalization/deleteDesignation/' . $designation['id']); ?>">Delete</a></span></td>
+                                                            <td><span><a href="<?php echo base_url('adminLocalization/editDesignation/' . $designation['id']); ?>">Edit</a></span> | <span><a href="<?php echo base_url('adminLocalization/deleteDesignation/' . $designation['id']); ?>">Delete</a></span></td>
                                                         </tr>
                                                     <?php
                                                     }

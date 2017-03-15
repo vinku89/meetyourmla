@@ -54,7 +54,7 @@
                                                         <tr class="odd gradeX">
                                                             <td><?php echo $sno++; ?></td>
                                                             <td><?php echo ucwords($mandal['name']); ?></td>
-                                                            <td><span><a href="<?php echo base_url('adminLocalization/updateMandal/' . $mandal['id']); ?>">Edit</a></span> | <span><a href="<?php echo base_url('adminLocalization/deleteMandal/' . $mandal['id']); ?>">Delete</a></span></td>
+                                                            <td><span><a href="<?php echo base_url('adminLocalization/editMandal/' . $mandal['id']); ?>">Edit</a></span> | <span><a href="<?php echo base_url('adminLocalization/deleteMandal/' . $mandal['id']); ?>">Delete</a></span></td>
                                                         </tr>
                                                     <?php
                                                     }
